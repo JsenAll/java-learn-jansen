@@ -1,4 +1,4 @@
-package main.MultiThread;
+package main.MultiThread.study1;
 /**
 * @Description:    类作用描述:      地址链接:
 * @Author:         JHS
