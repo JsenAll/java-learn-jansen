@@ -26,7 +26,9 @@ public class TestThread {
         leesin.damage = 80;
     }
 
-    //
+    /**
+     * 不使用多线程
+     */
     @Test
     public void main() {
         init();
@@ -45,65 +47,39 @@ public class TestThread {
     }
 
     /**
-     * 使用多线程进行攻击
+     * 继承Thread 使用多线程进行攻击
      */
     @Test
     public void main2() {
-        Hero gareen = new Hero();
-        gareen.name = "盖伦";
-        gareen.hp = 616;
-        gareen.damage = 50;
-
-        Hero teemo = new Hero();
-        teemo.name = "提莫";
-        teemo.hp = 300;
-        teemo.damage = 30;
-
-        Hero bh = new Hero();
-        bh.name = "赏金猎人";
-        bh.hp = 500;
-        bh.damage = 65;
-
-        Hero leesin = new Hero();
-        leesin.name = "盲僧";
-        leesin.hp = 455;
-        leesin.damage = 80;
-
-        KillThread killThread1 = new KillThread(gareen,teemo);
+        KillThread killThread1 = new KillThread(gareen, teemo);
         killThread1.start();
-        KillThread killThread2 = new KillThread(bh,leesin);
+        KillThread killThread2 = new KillThread(bh, leesin);
         killThread2.start();
         try {
-            Thread.sleep(10000);
+            Thread.sleep(10000);//在测试方法中 测试方法结束所有的线程全部结束
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-        Hero gareen = new Hero();
-        gareen.name = "盖伦";
-        gareen.hp = 616;
-        gareen.damage = 50;
+    /**
+     * 实现Runnable接口 使用多线程进行攻击
+     */
+    @Test
+    public void main3() {
+        init();
+        Battle battle1 = new Battle(gareen, teemo);
 
-        Hero teemo = new Hero();
-        teemo.name = "提莫";
-        teemo.hp = 300;
-        teemo.damage = 30;
+        new Thread(battle1).start();
 
-        Hero bh = new Hero();
-        bh.name = "赏金猎人";
-        bh.hp = 500;
-        bh.damage = 65;
-
-        Hero leesin = new Hero();
-        leesin.name = "盲僧";
-        leesin.hp = 455;
-        leesin.damage = 80;
-
-        KillThread killThread1 = new KillThread(gareen,teemo);
-        killThread1.start();
-        KillThread killThread2 = new KillThread(bh,leesin);
-        killThread2.start();
+        Battle battle2 = new Battle(bh, leesin);
+        new Thread(battle2).start();
+        try {
+            Thread.sleep(10000);//在测试方法中 测试方法结束所有的线程全部结束
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
+
 }
