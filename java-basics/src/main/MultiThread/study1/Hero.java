@@ -16,7 +16,7 @@ public class Hero{
     public void attackHero(Hero h) {
         try {
             //为了表示攻击需要时间，每次攻击暂停1000毫秒
-            Thread.sleep(1000);
+            Thread.sleep(0);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

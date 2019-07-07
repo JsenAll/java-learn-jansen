@@ -2,6 +2,13 @@ package main.MultiThread.study1;
 
 import org.junit.Test;
 
+/**
+ * 多线程的三种方法:
+ * 1:集成Thred的类
+ * 2:实现Runnable接口
+ * 3:匿名类的方式
+ * 4:实现Callable接口(这里不实现)
+ */
 public class TestThread {
     static Hero gareen = new Hero();
     static Hero teemo = new Hero();
@@ -42,8 +49,6 @@ public class TestThread {
         while (!leesin.isDead()) {
             bh.attackHero(leesin);
         }
-
-
     }
 
     /**
@@ -69,9 +74,7 @@ public class TestThread {
     public void main3() {
         init();
         Battle battle1 = new Battle(gareen, teemo);
-
         new Thread(battle1).start();
-
         Battle battle2 = new Battle(bh, leesin);
         new Thread(battle2).start();
         try {
@@ -81,5 +84,38 @@ public class TestThread {
         }
     }
 
+    /**
+     * 使用匿名类，继承Thread,重写run方法，直接在run方法中写业务代码
+     * 匿名类的一个好处是可以很方便的访问外部的局部变量。
+     * 前提是外部的局部变量需要被声明为final。(JDK7以后就不需要了)
+     */
+    @Test
+    public void main4() {
+        init();
+        //匿名类
+        Thread t1= new Thread(){
+            public void run(){
+                //匿名类中用到外部的局部变量teemo，必须把teemo声明为final
+                //但是在JDK7以后，就不是必须加final的了
+                while(!teemo.isDead()){
+                    gareen.attackHero(teemo);
+                }
+            }
+        };
+        t1.start();
+        Thread t2= new Thread(){
+            public void run(){
+                while(!leesin.isDead()){
+                    bh.attackHero(leesin);
+                }
+            }
+        };
+        t2.start();
+        try {
+            Thread.sleep(10000);//在测试方法中 测试方法结束所有的线程全部结束
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
