@@ -233,6 +233,7 @@ public class TestThreadStatus {
     public static void main(String[] args) {
 //        TestThreadStatus.daemonTest();
         TestThreadStatus.joinTest();
+        TestThreadStatus.priorityTest();;
 
 
     }
