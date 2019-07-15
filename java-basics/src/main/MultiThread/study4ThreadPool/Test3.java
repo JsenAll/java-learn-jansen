@@ -7,17 +7,17 @@ import java.util.concurrent.TimeUnit;
 public class Test3 {
     public static void main(String[] args) {
         ThreadPoolExecutor pool =
-                new ThreadPoolExecutor(2, 2, 3, TimeUnit.SECONDS, new LinkedBlockingDeque<>(10));
-//        for (int i = 0; i <100 ; i++) {
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-        pool.execute(new Test03tt());
-//        }
+                new ThreadPoolExecutor(2, 2, 3, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
+        for (int i = 0; i < 100; i++) {
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+            pool.execute(new Test03tt());
+        }
 
 
         pool.shutdown();
