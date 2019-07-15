@@ -1,4 +1,4 @@
-package main;
+package main.MultiThread.study4ThreadPool;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
