@@ -1,8 +1,9 @@
-package main.MultiThread.study2;
+package main.MultiThread.study2.prioritytest;
 
-public class Tortoise extends Thread {
-    public Tortoise(String name) {
+public class Rabbit extends Thread {
+    public Rabbit(String name) {
         super.setName(name);
+
     }
 
     @Override
@@ -10,6 +11,6 @@ public class Tortoise extends Thread {
         while (true) {
             System.out.println("我是" + this.currentThread().getName() + ":My Priority:" + this.getPriority());
         }
-    }
 
+    }
 }

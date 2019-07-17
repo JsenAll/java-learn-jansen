@@ -1,4 +1,4 @@
-package main.MultiThread.study2;
+package main.MultiThread.study2.prioritytest;
 
 public class TestPriority {
     public static void main(String[] args) {
