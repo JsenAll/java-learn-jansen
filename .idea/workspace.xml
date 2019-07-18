@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffb232de-8113-4e9b-aa1a-3e3d3dbb1129" name="Default Changelist" comment="线程控制">
-      <change beforePath="$PROJECT_DIR$/java-basics/src/main/MultiThread/study3Concurrency/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-basics/src/main/MultiThread/study3synchronized/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-basics/src/main/MultiThread/study3Concurrency/TestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-basics/src/main/MultiThread/study3synchronized/TestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/java-Maven/target/" />
@@ -139,6 +138,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="MultiThread" type="462c0819:PsiDirectoryNode" />
+              <item name="study2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-learn-jansen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-basics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="MultiThread" type="462c0819:PsiDirectoryNode" />
               <item name="study3synchronized" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -151,7 +158,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563410459687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563411108002" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../work" />
   </component>
   <component name="RunDashboard">
@@ -310,7 +317,7 @@
       <workItem from="1563089564735" duration="4081000" />
       <workItem from="1563146149745" duration="265000" />
       <workItem from="1563240265224" duration="12094000" />
-      <workItem from="1563352911293" duration="10007000" />
+      <workItem from="1563352911293" duration="10553000" />
     </task>
     <task id="LOCAL-00001" summary="删除xml">
       <created>1563249001392</created>
@@ -337,12 +344,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17001000" />
+    <option name="totallyTimeSpent" value="17547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29530916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29530916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -359,7 +366,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.4099783" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.18980478" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.4078091" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.5672451" />
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32968238" />
