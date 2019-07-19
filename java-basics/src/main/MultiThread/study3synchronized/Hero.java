@@ -1,4 +1,4 @@
-package main.MultiThread.study3Concurrency;
+package main.MultiThread.study3synchronized;
 
 public class Hero {
     public String name;
