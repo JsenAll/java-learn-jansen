@@ -1,7 +1,7 @@
 package main.MultiThread.study3synchronized;
 
 public class BuyTrainTicket2 implements Runnable {
-    private int ticketNum = 10;
+    private static int ticketNum = 10;
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
