@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class TestThread {
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         ThreadPool pool = new ThreadPool();
 
         for (int i = 0; i < 5; i++) {

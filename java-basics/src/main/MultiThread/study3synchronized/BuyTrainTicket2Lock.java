@@ -7,8 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * 使用Lock 进行加锁
  */
 public class BuyTrainTicket2Lock implements Runnable {
-    private static int ticketNum = 10;
-    static Lock lock = new ReentrantLock();
+    private int ticketNum = 10;
+     Lock lock = new ReentrantLock();
 
     @Override
     public void run() {
@@ -35,7 +35,7 @@ public class BuyTrainTicket2Lock implements Runnable {
         BuyTrainTicket2Lock b2 = new BuyTrainTicket2Lock();
         BuyTrainTicket2Lock b3 = new BuyTrainTicket2Lock();
         new Thread(b1, "窗口1").start();
-        new Thread(b2, "窗口2").start();
-        new Thread(b3, "窗口3").start();
+        new Thread(b1, "窗口2").start();
+        new Thread(b1, "窗口3").start();
     }
 }

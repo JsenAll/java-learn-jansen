@@ -3,7 +3,7 @@ package main.MultiThread;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Queue {
+public class  Queue {
     private LinkedList<Object> list = new LinkedList<Object>();
 
     private final int minSize = 0;

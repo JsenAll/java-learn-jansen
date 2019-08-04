@@ -20,11 +20,18 @@ public class BuyTrainTicket2 implements Runnable {
         }
     }
     public static void main(String[] args) {
-        BuyTrainTicket2 b1 = new BuyTrainTicket2();
-        BuyTrainTicket2 b2 = new BuyTrainTicket2();
-        BuyTrainTicket2 b3 = new BuyTrainTicket2();
-        new Thread(b1, "窗口1").start();
-        new Thread(b2, "窗口2").start();
-        new Thread(b3, "窗口3").start();
+//        BuyTrainTicket2 b1 = new BuyTrainTicket2();
+//        BuyTrainTicket2 b2 = new BuyTrainTicket2();
+//        BuyTrainTicket2 b3 = new BuyTrainTicket2();
+//        new Thread(b1, "窗口1").start();
+//        new Thread(b2, "窗口2").start();
+//        new Thread(b3, "窗口3").start();
+        /**
+         * ticketNum 不用static进行修饰
+         */
+        BuyTrainTicket2 buyTrainTicket2 = new BuyTrainTicket2();
+        new Thread(buyTrainTicket2, "窗口1").start();
+        new Thread(buyTrainTicket2, "窗口2").start();
+        new Thread(buyTrainTicket2, "窗口3").start();
     }
 }
